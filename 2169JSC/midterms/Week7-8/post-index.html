@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Get and post method</title>
+    <title>post method</title>
 
     <style>
-      /* body {
+      body {
         font-family: Arial, Helvetica, sans-serif;
       }
       .form-container {
@@ -21,29 +21,25 @@
       }
 
       #submit {
-        margin: 0 30%;
+        margin-top: 10px;
         font-size: 15px;
         padding: 5px 10px;
-      } */
+      }
+
+      .file {
+        font-size: 15px;
+      }
       
     </style>
   </head>
   <body>
     <div class="form-container">
       <h1>Example of Get method</h1>
-      <form action="http://127.0.0.1:3000/process_get" method="GET">
-        <div class="label-input">
-          <label for="firstname">FirstName:</label>
-          <input type="text" name="firstname"> <br>
-        </div>
-
-        <div class="label-input">
-          <label for="lastname">LastName:</label>
-          <input type="text" name="lastname"> <br>
-        </div>
-
-        <input type="submit" value="Submit" id="submit">
-      </form>
+      <h4>Upload files here.</h4>
+      <form action="/uploads" enctype="multipart/form-data" method="POST">
+        <input type="file" name="myFile" class="file"> </br>
+        <button type="submit" id="submit">Submit</button>
+      </form> 
     </div>
   </body>
 </html>
